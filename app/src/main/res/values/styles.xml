@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:radioButtonStyle">@style/AnswerRadioText</item>
+        <item name="android:checkboxStyle">@style/AnswerCheckBoxText</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="Question">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="EditAnswer">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AnswerRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlActivated">@android:color/white</item>
+        <item name="android:colorControlHighlight">@android:color/darker_gray</item>
+    </style>
+
+    <style name="AnswerRadioText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AnswerCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlActivated">@android:color/white</item>
+        <item name="android:colorControlHighlight">@android:color/darker_gray</item>
+    </style>
+
+    <style name="AnswerCheckBoxText" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
