@@ -39,9 +39,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public boolean getAnswerQTwo() {
         EditText questionTwoField = findViewById(R.id.q2_answer);
-        String answer = questionTwoField.getText().toString();
-        answer = answer.toLowerCase();
-        return answer.equals("neil armstrong") || answer.equals("armstrong");
+        String answer = questionTwoField.getText().toString().trim();
+        return answer.equalsIgnoreCase("neil armstrong") || answer.equalsIgnoreCase("armstrong");
     }
 
     /*
