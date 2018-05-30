@@ -36,6 +36,12 @@
     <string name="question_four_correct">4: Correct</string>
     <string name="question_four_incorrect">4. Incorrect</string>
 
-    <string name="toast_score">Score: <xliff:g id="scoreString" example="100">%s</xliff:g></string>
+    <string name="toast_score">Score: <xliff:g id="scoreString">%s</xliff:g></string>
     <string name="toast_congrats">Congratulations! Perfect Score!</string>
+
+    <string name="earth_content_description">An image of the Earth at distance.</string>
+    <string name="moon_content_description">An image of a footprint on the Moon.</string>
+    <string name="mars_content_description">An image of the Martian terrain taken on Mars by a probe.</string>
+    <string name="pluto_content_description">A close up image of Pluto\'s terrain.</string>
+
 </resources>

@@ -41,19 +41,19 @@ public class MainActivity extends AppCompatActivity {
         EditText questionTwoField = findViewById(R.id.q2_answer);
         String answer = questionTwoField.getText().toString();
         answer = answer.toLowerCase();
-        return (answer.equals("neil armstrong"));
+        return answer.equals("neil armstrong") || answer.equals("armstrong");
     }
 
     /*
     returns true if option A and option D are checked while options B and option C are not checked
     any other selections will return false
      */
-    public boolean getAnswerQThree(){
+    public boolean getAnswerQThree() {
         CheckBox checkQ3OptionA = findViewById(R.id.q3_option_a);
         CheckBox checkQ3OptionB = findViewById(R.id.q3_option_b);
         CheckBox checkQ3OptionC = findViewById(R.id.q3_option_c);
         CheckBox checkQ3OptionD = findViewById(R.id.q3_option_d);
-        return (checkQ3OptionA.isChecked() && checkQ3OptionD.isChecked() && !checkQ3OptionB.isChecked() && !checkQ3OptionC.isChecked() );
+        return (checkQ3OptionA.isChecked() && checkQ3OptionD.isChecked() && !checkQ3OptionB.isChecked() && !checkQ3OptionC.isChecked());
     }
 
     /*
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         float totalScore = score / 4;
-        totalScore = totalScore*100;
+        totalScore = totalScore * 100;
         String scoreString = String.format(Locale.US, "%.2f", totalScore);
         if (scoreString.equals("100.00")) {
             toastMessage = getString(R.string.toast_score, scoreString) + "\n" + toastMessage;
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     /* when an image is clicked, gets android:tag and opens intent to browser with it
      */
-    public void openBrowser(View view){
+    public void openBrowser(View view) {
 
         String url = (String) view.getTag();
 

@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:background="@android:color/black"
     tools:context="com.example.android.spacequiz.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/main_side_margins"
+        android:layout_marginRight="@dimen/main_side_margins"
         android:orientation="vertical">
 
         <TextView
@@ -22,219 +23,257 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="16dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margins"
             android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Question"
-                android:text="@string/question_one"/>
+                android:text="@string/question_one"
+                android:textAppearance="@style/Question"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <RadioGroup
                     android:id="@+id/question_one"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
                     <RadioButton
                         android:id="@+id/q1_option_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q1_answer_a"/>
+                        android:text="@string/q1_answer_a"
+                        android:theme="@style/AnswerRadioButton"/>
+
                     <RadioButton
                         android:id="@+id/q1_option_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q1_answer_b"/>
+                        android:text="@string/q1_answer_b"
+                        android:theme="@style/AnswerRadioButton"/>
+
                     <RadioButton
                         android:id="@+id/q1_option_c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q1_answer_c"/>
+                        android:text="@string/q1_answer_c"
+                        android:theme="@style/AnswerRadioButton"/>
+
                     <RadioButton
                         android:id="@+id/q1_option_d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q1_answer_d"/>
+                        android:text="@string/q1_answer_d"
+                        android:theme="@style/AnswerRadioButton"/>
+
                 </RadioGroup>
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="96dp"
+                    android:layout_height="@dimen/small_image_height"
+                    android:layout_margin="@dimen/small_image_margins"
                     android:layout_weight="1"
-                    android:layout_margin="16dp"
+                    android:contentDescription="@string/earth_content_description"
+                    android:onClick="openBrowser"
                     android:scaleType="fitCenter"
                     android:src="@drawable/earth"
-                    android:tag="https://images.nasa.gov/details-PIA01967.html"
-                    android:onClick="openBrowser"/>
+                    android:tag="https://images.nasa.gov/details-PIA01967.html"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="16dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margins"
             android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Question"
-                android:text="@string/question_two"/>
+                android:text="@string/question_two"
+                android:textAppearance="@style/Question"/>
+
             <EditText
                 android:id="@+id/q2_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_margin="@dimen/edit_field_margins"
                 android:background="@android:color/white"
-                android:textAppearance="@style/EditAnswer"
-                android:hint="@string/answer_here"/>
+                android:hint="@string/answer_here"
+                android:inputType="text"
+                android:textAppearance="@style/EditAnswer"/>
+
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="256dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:scaleType="centerInside"
-                android:tag="https://images.nasa.gov/details-6901250.html"
+                android:layout_height="@dimen/large_image_height"
+                android:layout_marginLeft="@dimen/large_image_horizontal_margins"
+                android:layout_marginRight="@dimen/large_image_horizontal_margins"
+                android:contentDescription="@string/moon_content_description"
                 android:onClick="openBrowser"
-                android:src="@drawable/moon_footprint"/>
+                android:scaleType="centerInside"
+                android:src="@drawable/moon_footprint"
+                android:tag="https://images.nasa.gov/details-6901250.html"/>
+
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="16dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margins"
             android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Question"
-                android:text="@string/question_three"/>
+                android:text="@string/question_three"
+                android:textAppearance="@style/Question"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <CheckBox
                         android:id="@+id/q3_option_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q3_answer_a">
+                        android:text="@string/q3_answer_a"
+                        android:theme="@style/AnswerRadioButton">
                     </CheckBox>
+
                     <CheckBox
                         android:id="@+id/q3_option_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q3_answer_b">
+                        android:text="@string/q3_answer_b"
+                        android:theme="@style/AnswerRadioButton">
                     </CheckBox>
+
                     <CheckBox
                         android:id="@+id/q3_option_c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q3_answer_c">
+                        android:text="@string/q3_answer_c"
+                        android:theme="@style/AnswerRadioButton">
                     </CheckBox>
+
                     <CheckBox
                         android:id="@+id/q3_option_d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q3_answer_d">
+                        android:text="@string/q3_answer_d"
+                        android:theme="@style/AnswerRadioButton">
                     </CheckBox>
+
                 </LinearLayout>
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="96dp"
+                    android:layout_height="@dimen/small_image_height"
+                    android:layout_margin="@dimen/small_image_margins"
                     android:layout_weight="1"
-                    android:layout_margin="16dp"
-                    android:scaleType="fitCenter"
-                    android:tag="https://images.nasa.gov/details-PIA00568.html"
+                    android:contentDescription="@string/mars_content_description"
                     android:onClick="openBrowser"
-                    android:src="@drawable/mars"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mars"
+                    android:tag="https://images.nasa.gov/details-PIA00568.html"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="16dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_margin="@dimen/divider_margins"
             android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Question"
-                android:text="@string/question_four"/>
+                android:text="@string/question_four"
+                android:textAppearance="@style/Question"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <RadioGroup
                     android:id="@+id/question_four"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RadioButton
                         android:id="@+id/q4_option_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q4_answer_a"/>
+                        android:text="@string/q4_answer_a"
+                        android:theme="@style/AnswerRadioButton"/>
+
                     <RadioButton
                         android:id="@+id/q4_option_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AnswerRadioButton"
-                        android:text="@string/q4_answer_b"/>
+                        android:text="@string/q4_answer_b"
+                        android:theme="@style/AnswerRadioButton"/>
+
                 </RadioGroup>
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="96dp"
+                    android:layout_height="@dimen/small_image_height"
+                    android:layout_margin="@dimen/small_image_margins"
                     android:layout_weight="1"
-                    android:layout_margin="16dp"
-                    android:scaleType="fitCenter"
-                    android:tag="https://images.nasa.gov/details-PIA20198.html"
+                    android:contentDescription="@string/pluto_content_description"
                     android:onClick="openBrowser"
-                    android:src="@drawable/pluto"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pluto"
+                    android:tag="https://images.nasa.gov/details-PIA20198.html"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/submit_answers"
-            android:onClick="submitAnswers"/>
+            android:layout_margin="@dimen/submit_margins"
+            android:onClick="submitAnswers"
+            android:text="@string/submit_answers"/>
 
     </LinearLayout>
+
 </ScrollView>

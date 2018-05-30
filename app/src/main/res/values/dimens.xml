@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_side_margins">16dp</dimen>
+
+    <dimen name="divider_margins">16dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+
+    <dimen name="small_image_height">96dp</dimen>
+    <dimen name="small_image_margins">16dp</dimen>
+
+    <dimen name="large_image_height">256dp</dimen>
+    <dimen name="large_image_horizontal_margins">24dp</dimen>
+
+    <dimen name="edit_field_margins">24dp</dimen>
+
+    <dimen name="submit_margins">16dp</dimen>
+</resources>
